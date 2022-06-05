@@ -140,7 +140,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions)
   .then(data => {
-    console.log(data);
+    //console.log(data);
     writeToFile('finishedREADME.md', data)
   })
 }
