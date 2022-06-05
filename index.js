@@ -56,16 +56,93 @@ const questions = [
             }
         }
     },
-];
+    {
+      type: 'checkbox',
+      name: 'license',
+      message: 'What license does your have?',
+      choices:['MIT', 'Apache', 'ISC'],
+      validate: licenseInput => {
+        if (licenseInput) {
+          return true;
+        } else { //doesn't account for nothing entered
+          console.log('Please enter license information!(If not using a license please select "None")');
+          return false;
+        }
+    }   
+    },
+    {
+      type: 'input',
+      name: 'contribution',
+      message: 'Please enter information on how the user can contribute to the repo.',
+      validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter contribution information!');
+            return false;
+          }
+      }   
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'Please enter instructions to test your project',
+      validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter testing instructions!');
+            return false;
+          }
+      }   
+    },
+    {
+      type: 'input',
+      name: 'github',
+      message: 'Please enter your github where people can reach you at for queastions.',
+      validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter your github!');
+            return false;
+          }
+      }   
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Please enter an email where people can reach you for queastions.',
+      validate: nameInput => {
+          if (nameInput) {
+            return true;
+          } else {
+            console.log('Please enter an email!');
+            return false;
+          }
+      }   
+    }
+  ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, err)
+  fs.writeFile(fileName, generateMarkdown(data), err => {
+  if(err) {
+    throw err;
+  }
+  //outputs successful readme generation
+  console.log('README Created Successfully');
+})
+
 }
 
 // TODO: Create a function to initialize app
 function init() {
-  return inquirer.prompt(questions);
+  inquirer.prompt(questions)
+  .then(data => {
+    console.log(data);
+    writeToFile('finishedREADME.md', data)
+  })
 }
 
 // Function call to initialize app
