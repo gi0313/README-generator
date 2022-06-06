@@ -59,7 +59,7 @@ const questions = [
     {
       type: 'checkbox',
       name: 'license',
-      message: 'What license does your have?',
+      message: 'What license does your project have?',
       choices:['MIT', 'Apache', 'ISC'],
       validate: licenseInput => {
         if (licenseInput) {
@@ -99,7 +99,7 @@ const questions = [
     {
       type: 'input',
       name: 'github',
-      message: 'Please enter your github where people can reach you at for queastions.',
+      message: 'Please enter your github where people can reach you at for questions.',
       validate: nameInput => {
           if (nameInput) {
             return true;
@@ -112,7 +112,7 @@ const questions = [
     {
       type: 'input',
       name: 'email',
-      message: 'Please enter an email where people can reach you for queastions.',
+      message: 'Please enter an email where people can reach you for questions.',
       validate: nameInput => {
           if (nameInput) {
             return true;

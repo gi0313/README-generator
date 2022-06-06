@@ -1,5 +1,5 @@
 
-  # gfwera
+  # README generator
   # Table of contents
   * [License](#license)
   * [Installation](#installation)
@@ -7,13 +7,15 @@
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [Questions](#questions)
-  ## greagrea
+  * 
+  # Description
+  ## creates a readme
 
   # Installation
-  ## grea
+  ## install dependencies
 
   # Usage
-  ## rgea 
+  ## creates a sample readme 
 
   # License
   - MIT,Apache
@@ -21,12 +23,12 @@
   
 
   # Contributing
-  ## fwae
+  ## update the repo
 
   # Tests
-  ## greag
+  ## install and test
 
   # Questions
-  ## [Visit my Github](https://www.github.com/ger4awg)
+  ## [Visit my Github](https://www.github.com/gi0313)
 
-  ## [Send me an email:](grea)
+  ## [Send me an email:](grhjeka)
